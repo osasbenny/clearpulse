@@ -109,3 +109,6 @@
 
 ## UI Text Updates
 - [x] Change "Go to Dashboard" to "Create an Account" or "Register"
+
+## Bug Fixes
+- [x] Fix nested anchor tag error on About page
