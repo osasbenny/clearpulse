@@ -34,7 +34,7 @@ export default function Home() {
               <Link href="/contact"><a className="text-gray-600 hover:text-blue-600 transition-colors">Contact</a></Link>
               <a href={getLoginUrl()} className="text-gray-600 hover:text-blue-600 transition-colors">Sign in</a>
               <Button asChild>
-                <a href={getLoginUrl()}>Go to Dashboard</a>
+                <a href={getLoginUrl()}>Create an Account</a>
               </Button>
             </div>
           </div>
