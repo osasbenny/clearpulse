@@ -93,8 +93,8 @@
 - [ ] Installation and deployment guide
 
 ## Deployment
-- [ ] Connect to GitHub repository
-- [ ] Push code to repository
+- [x] Connect to GitHub repository
+- [x] Push code to repository
 
 ## Homepage Improvements
 - [x] Add professional logo and favicon
