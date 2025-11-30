@@ -103,9 +103,9 @@
 - [x] Improve visual design inspired by Clyveris
 
 ## cPanel Deployment
-- [ ] Build production distribution files
-- [ ] Configure for cPanel deployment
-- [ ] Push dist files to GitHub
+- [x] Build production distribution files
+- [x] Configure for cPanel deployment
+- [x] Push dist files to GitHub
 
 ## UI Text Updates
 - [x] Change "Go to Dashboard" to "Create an Account" or "Register"
