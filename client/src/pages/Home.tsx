@@ -1,330 +1,354 @@
 import { Link } from "wouter";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
-import {
-  Shield,
-  Smartphone,
-  Eye,
-  HeadphonesIcon,
-  ArrowRight,
-  CheckCircle2,
-  CreditCard,
-  Send,
-  FileText,
-  Clock,
-} from "lucide-react";
-import { getLoginUrl } from "@/const";
+import { Shield, Smartphone, Globe, FileText, HeadphonesIcon, Zap, ArrowRight, CheckCircle2 } from "lucide-react";
 
 export default function Home() {
   return (
     <div className="min-h-screen bg-white">
       {/* Navigation */}
-      <nav className="border-b bg-white sticky top-0 z-50">
-        <div className="container mx-auto px-6 py-4">
-          <div className="flex items-center justify-between">
-            <Link href="/">
-              <a className="flex items-center gap-3">
-                <img src="/logo.png" alt="ClearPulse" className="h-10 w-10" />
-                <span className="text-2xl font-bold text-gray-900">ClearPulse</span>
-              </a>
-            </Link>
-            <div className="hidden md:flex items-center gap-8">
-              <Link href="/about"><a className="text-gray-600 hover:text-blue-600 transition-colors">About</a></Link>
-              <Link href="/faq"><a className="text-gray-600 hover:text-blue-600 transition-colors">FAQ</a></Link>
-              <Link href="/contact"><a className="text-gray-600 hover:text-blue-600 transition-colors">Contact</a></Link>
-              <a href={getLoginUrl()} className="text-gray-600 hover:text-blue-600 transition-colors">Sign in</a>
-              <Button asChild>
-                <a href={getLoginUrl()}>Create an Account</a>
+      <nav className="bg-white border-b sticky top-0 z-50">
+        <div className="container mx-auto px-4 py-4 flex items-center justify-between">
+          <Link href="/">
+            <a className="flex items-center gap-2">
+              <img src="/logo.png" alt="ClearPulse" className="h-10 w-10" />
+              <span className="text-2xl font-bold text-[#1E2A47]">ClearPulse</span>
+            </a>
+          </Link>
+          <div className="hidden md:flex items-center gap-8">
+            <Link href="/about"><a className="text-gray-700 hover:text-[#00A9B8] transition-colors">About</a></Link>
+            <Link href="/faq"><a className="text-gray-700 hover:text-[#00A9B8] transition-colors">FAQ</a></Link>
+            <Link href="/contact"><a className="text-gray-700 hover:text-[#00A9B8] transition-colors">Contact</a></Link>
+            <Link href="/dashboard"><a className="text-gray-700 hover:text-[#00A9B8] transition-colors">Sign in</a></Link>
+            <Link href="/dashboard">
+              <Button className="bg-[#00A9B8] hover:bg-[#008A9A] text-white rounded-full px-6">
+                E-Banking
               </Button>
-            </div>
+            </Link>
           </div>
         </div>
       </nav>
 
       {/* Hero Section */}
-      <section className="relative bg-gradient-to-br from-blue-50 via-white to-blue-50 py-20 md:py-32 overflow-hidden">
-        <div className="container mx-auto px-6">
+      <section className="bg-[#1E2A47] relative overflow-hidden">
+        {/* Decorative circles */}
+        <div className="absolute top-0 right-0 w-96 h-96 bg-[#00A9B8] rounded-full opacity-10 transform translate-x-1/2 -translate-y-1/2"></div>
+        <div className="absolute bottom-0 left-0 w-64 h-64 bg-[#00A9B8] rounded-full opacity-10 transform -translate-x-1/2 translate-y-1/2"></div>
+        <div className="absolute top-1/2 right-1/4 w-32 h-32 border-4 border-[#00A9B8] rounded-full opacity-20"></div>
+        
+        <div className="container mx-auto px-4 py-20 relative z-10">
           <div className="grid md:grid-cols-2 gap-12 items-center">
-            <div className="space-y-8">
-              <h1 className="text-5xl md:text-6xl font-bold text-gray-900 leading-tight">
-                Banking Made <span className="text-blue-600">Simple</span> and{" "}
-                <span className="text-blue-600">Secure</span>
+            <div className="text-white">
+              <p className="text-[#00A9B8] font-semibold mb-4 tracking-wider uppercase text-sm">ClearPulse Banking</p>
+              <h1 className="text-5xl md:text-6xl font-bold mb-6 leading-tight">
+                Bank With Confidence,<br />
+                Harvest The Rewards
               </h1>
-              <p className="text-xl text-gray-600 leading-relaxed">
-                Experience modern banking with ClearPulse. Manage your finances, transfer money globally,
-                and access loans with just a few clicks.
+              <p className="text-gray-300 text-lg mb-8 leading-relaxed">
+                Mutual fund from ClearPulse Asset Management that invests in Greek and international 
+                corporate bonds in dollars, euros and pounds.
               </p>
-              <div className="flex flex-wrap gap-4">
-                <Button size="lg" asChild className="text-lg px-8">
-                  <a href={getLoginUrl()}>
-                    Open an Account <ArrowRight className="ml-2 h-5 w-5" />
-                  </a>
-                </Button>
-                <Button size="lg" variant="outline" asChild className="text-lg px-8">
-                  <Link href="/about">Learn More</Link>
-                </Button>
+              <div className="flex flex-col sm:flex-row gap-4 items-start">
+                <Link href="/dashboard">
+                  <Button className="bg-[#00A9B8] hover:bg-[#008A9A] text-white rounded-full px-8 py-6 text-lg">
+                    Open An Account Now <ArrowRight className="ml-2 h-5 w-5" />
+                  </Button>
+                </Link>
+                <div className="flex items-center gap-3 text-white">
+                  <div className="w-12 h-12 rounded-full bg-[#00A9B8]/20 flex items-center justify-center">
+                    <HeadphonesIcon className="h-6 w-6 text-[#00A9B8]" />
+                  </div>
+                  <div>
+                    <p className="text-sm text-gray-400">Need help?</p>
+                    <p className="font-semibold text-lg">352929392</p>
+                  </div>
+                </div>
               </div>
             </div>
             <div className="relative">
-              <img
-                src="/images/hero-banking.jpg"
-                alt="Modern Banking"
-                className="rounded-2xl shadow-2xl w-full h-auto object-cover"
+              <div className="absolute -top-8 -right-8 w-64 h-64 bg-[#00A9B8] rounded-3xl transform rotate-12"></div>
+              <img 
+                src="/images/team-meeting.jpg" 
+                alt="Banking Team" 
+                className="relative z-10 rounded-3xl shadow-2xl w-full"
               />
             </div>
           </div>
         </div>
       </section>
 
-      {/* Features Section */}
-      <section className="py-20 bg-white">
-        <div className="container mx-auto px-6">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">Banking That Works for You</h2>
-            <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-              Discover why thousands of customers trust ClearPulse for their personal banking needs.
-            </p>
+      {/* Experience Badge Section */}
+      <section className="py-20 bg-gray-50">
+        <div className="container mx-auto px-4">
+          <div className="grid md:grid-cols-2 gap-12 items-center">
+            <div className="relative">
+              <div className="grid grid-cols-2 gap-4">
+                <img 
+                  src="/images/team-collaboration.jpg" 
+                  alt="Team Collaboration" 
+                  className="rounded-2xl shadow-lg"
+                />
+                <img 
+                  src="/images/diverse-team.jpg" 
+                  alt="Diverse Team" 
+                  className="rounded-2xl shadow-lg mt-8"
+                />
+              </div>
+              <div className="absolute -bottom-4 -right-4 bg-[#00A9B8] text-white p-8 rounded-2xl shadow-xl">
+                <div className="text-5xl font-bold">25</div>
+                <div className="text-sm">Years Of<br />experience</div>
+              </div>
+            </div>
+            <div>
+              <p className="text-[#00A9B8] font-semibold mb-4 tracking-wider uppercase text-sm">Banking With Ease</p>
+              <h2 className="text-4xl font-bold text-[#1E2A47] mb-6">
+                Make your online transactions safely
+              </h2>
+              <p className="text-gray-600 mb-8 leading-relaxed">
+                Find out what to look out for when transacting online and how we keep you safe. Find 
+                practical tips and guidelines for safe trading.
+              </p>
+              <div className="space-y-4 mb-8">
+                <div className="flex items-start gap-3">
+                  <CheckCircle2 className="h-6 w-6 text-[#00A9B8] flex-shrink-0 mt-1" />
+                  <div>
+                    <h3 className="font-semibold text-[#1E2A47] mb-1">Online FX Conversion</h3>
+                  </div>
+                </div>
+                <div className="flex items-start gap-3">
+                  <CheckCircle2 className="h-6 w-6 text-[#00A9B8] flex-shrink-0 mt-1" />
+                  <div>
+                    <h3 className="font-semibold text-[#1E2A47] mb-1">Shipments and Shipments</h3>
+                  </div>
+                </div>
+                <div className="flex items-start gap-3">
+                  <CheckCircle2 className="h-6 w-6 text-[#00A9B8] flex-shrink-0 mt-1" />
+                  <div>
+                    <h3 className="font-semibold text-[#1E2A47] mb-1">Bulk Payments</h3>
+                  </div>
+                </div>
+                <div className="flex items-start gap-3">
+                  <CheckCircle2 className="h-6 w-6 text-[#00A9B8] flex-shrink-0 mt-1" />
+                  <div>
+                    <h3 className="font-semibold text-[#1E2A47] mb-1">Privacy & Security Guaranteed</h3>
+                  </div>
+                </div>
+              </div>
+              <Link href="/about">
+                <Button className="bg-[#00A9B8] hover:bg-[#008A9A] text-white rounded-full px-8">
+                  Visit Us Today
+                </Button>
+              </Link>
+            </div>
           </div>
+        </div>
+      </section>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+      {/* Services Section */}
+      <section className="py-20 bg-white">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-16">
+            <p className="text-[#00A9B8] font-semibold mb-4 tracking-wider uppercase text-sm">Bank With Us</p>
+            <h2 className="text-4xl font-bold text-[#1E2A47] mb-4">
+              For convenience in the digital age
+            </h2>
+          </div>
+          <div className="grid md:grid-cols-3 gap-8">
             <Card className="border-none shadow-lg hover:shadow-xl transition-shadow">
-              <CardContent className="p-8 text-center">
-                <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-6">
-                  <Shield className="h-8 w-8 text-blue-600" />
+              <CardContent className="p-8">
+                <div className="w-16 h-16 bg-[#00A9B8] rounded-xl flex items-center justify-center mb-6">
+                  <Smartphone className="h-8 w-8 text-white" />
                 </div>
-                <h3 className="text-xl font-bold mb-3">Top-Notch Security</h3>
-                <p className="text-gray-600 mb-4 font-semibold">"Bank with confidence, knowing your money is safe."</p>
-                <p className="text-gray-600 text-sm">
-                  Your money and data are protected with industry-leading encryption and fraud detection systems.
+                <h3 className="text-xl font-bold text-[#1E2A47] mb-3">
+                  Come to ClearPulse
+                </h3>
+                <p className="text-gray-600 mb-6">
+                  Open your first account at ClearPulse, and get a debit card and e-Banking 
+                  codes from your mobile.
                 </p>
+                <img 
+                  src="/images/banking-professionals.jpg" 
+                  alt="Banking Professionals" 
+                  className="rounded-xl w-full"
+                />
               </CardContent>
             </Card>
 
             <Card className="border-none shadow-lg hover:shadow-xl transition-shadow">
-              <CardContent className="p-8 text-center">
-                <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-6">
-                  <Smartphone className="h-8 w-8 text-green-600" />
+              <CardContent className="p-8">
+                <div className="w-16 h-16 bg-[#00A9B8] rounded-xl flex items-center justify-center mb-6">
+                  <Globe className="h-8 w-8 text-white" />
                 </div>
-                <h3 className="text-xl font-bold mb-3">Convenience at Your Fingertips</h3>
-                <p className="text-gray-600 mb-4 font-semibold">"Access your funds whenever you need them."</p>
-                <p className="text-gray-600 text-sm">
-                  Manage your accounts anytime, anywhere, with our user-friendly online and mobile banking platforms.
+                <h3 className="text-xl font-bold text-[#1E2A47] mb-3">
+                  Log in to ClearPulse Web
+                </h3>
+                <p className="text-gray-600 mb-6">
+                  Get full control of your transactions and banking products, at ClearPulse 
+                  and other banks, from your computer.
                 </p>
+                <img 
+                  src="/images/team-collaboration.jpg" 
+                  alt="Web Banking" 
+                  className="rounded-xl w-full"
+                />
               </CardContent>
             </Card>
 
             <Card className="border-none shadow-lg hover:shadow-xl transition-shadow">
-              <CardContent className="p-8 text-center">
-                <div className="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-6">
-                  <Eye className="h-8 w-8 text-purple-600" />
+              <CardContent className="p-8">
+                <div className="w-16 h-16 bg-[#00A9B8] rounded-xl flex items-center justify-center mb-6">
+                  <FileText className="h-8 w-8 text-white" />
                 </div>
-                <h3 className="text-xl font-bold mb-3">Transparent Banking</h3>
-                <p className="text-gray-600 mb-4 font-semibold">"What you see is what you get."</p>
-                <p className="text-gray-600 text-sm">
-                  No hidden fees, no surprises—just clear and honest banking with complete visibility.
+                <h3 className="text-xl font-bold text-[#1E2A47] mb-3">
+                  Get ClearPulse Loan
+                </h3>
+                <p className="text-gray-600 mb-6">
+                  Secure a consumer loan of up to $10,000 online. Apply from your mobile or 
+                  computer, on the first day.
                 </p>
-              </CardContent>
-            </Card>
-
-            <Card className="border-none shadow-lg hover:shadow-xl transition-shadow">
-              <CardContent className="p-8 text-center">
-                <div className="w-16 h-16 bg-orange-100 rounded-full flex items-center justify-center mx-auto mb-6">
-                  <HeadphonesIcon className="h-8 w-8 text-orange-600" />
-                </div>
-                <h3 className="text-xl font-bold mb-3">Personal Support</h3>
-                <p className="text-gray-600 mb-4 font-semibold">"We're here to help you every step of the way."</p>
-                <p className="text-gray-600 text-sm">
-                  Our dedicated customer support team is here for you 24/7, providing tailored solutions.
-                </p>
+                <img 
+                  src="/images/diverse-team.jpg" 
+                  alt="Loan Services" 
+                  className="rounded-xl w-full"
+                />
               </CardContent>
             </Card>
           </div>
         </div>
       </section>
 
-      {/* Services Section */}
+      {/* Business Section */}
       <section className="py-20 bg-gray-50">
-        <div className="container mx-auto px-6">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">Banking Made Easy with ClearPulse</h2>
-            <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-              We provide a suite of services to simplify your financial life and meet your everyday banking needs.
-            </p>
-          </div>
+        <div className="container mx-auto px-4">
+          <div className="grid md:grid-cols-2 gap-12 items-center">
+            <div>
+              <p className="text-[#00A9B8] font-semibold mb-4 tracking-wider uppercase text-sm">Our Work Process</p>
+              <h2 className="text-4xl font-bold text-[#1E2A47] mb-8">
+                It's a pleasure doing business with you
+              </h2>
+              
+              <div className="space-y-8">
+                <div className="flex gap-4">
+                  <div className="w-16 h-16 bg-[#00A9B8] rounded-xl flex items-center justify-center flex-shrink-0">
+                    <Shield className="h-8 w-8 text-white" />
+                  </div>
+                  <div>
+                    <h3 className="text-xl font-bold text-[#1E2A47] mb-2">Banking Services</h3>
+                    <p className="text-gray-600">
+                      ClearPulse has a great range of products to offer you complete banking services. 
+                      So ditch your old bank and switch to ClearPulse today.
+                    </p>
+                  </div>
+                </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <div className="bg-white p-8 rounded-xl shadow-md hover:shadow-lg transition-shadow">
-              <Smartphone className="h-12 w-12 text-blue-600 mb-6" />
-              <h3 className="text-2xl font-bold mb-4">Online Banking</h3>
-              <p className="text-gray-600 mb-6">
-                Access your accounts anytime, anywhere. Monitor balances, transfer funds, and pay bills securely from any device.
-              </p>
-              <ul className="space-y-2">
-                <li className="flex items-start gap-2 text-gray-600">
-                  <CheckCircle2 className="h-5 w-5 text-green-600 mt-0.5 flex-shrink-0" />
-                  <span>Convenient 24/7 access to your accounts</span>
-                </li>
-                <li className="flex items-start gap-2 text-gray-600">
-                  <CheckCircle2 className="h-5 w-5 text-green-600 mt-0.5 flex-shrink-0" />
-                  <span>Easy bill payments and fund transfers</span>
-                </li>
-                <li className="flex items-start gap-2 text-gray-600">
-                  <CheckCircle2 className="h-5 w-5 text-green-600 mt-0.5 flex-shrink-0" />
-                  <span>Secure and user-friendly interface</span>
-                </li>
-              </ul>
+                <div className="flex gap-4">
+                  <div className="w-16 h-16 bg-[#00A9B8] rounded-xl flex items-center justify-center flex-shrink-0">
+                    <Zap className="h-8 w-8 text-white" />
+                  </div>
+                  <div>
+                    <h3 className="text-xl font-bold text-[#1E2A47] mb-2">Business Transaction Accounts</h3>
+                    <p className="text-gray-600">
+                      We offer easy to use accounts that are designed exclusively to meet your business needs.
+                    </p>
+                  </div>
+                </div>
+
+                <div className="flex gap-4">
+                  <div className="w-16 h-16 bg-[#00A9B8] rounded-xl flex items-center justify-center flex-shrink-0">
+                    <FileText className="h-8 w-8 text-white" />
+                  </div>
+                  <div>
+                    <h3 className="text-xl font-bold text-[#1E2A47] mb-2">Cash Management Account</h3>
+                    <p className="text-gray-600">
+                      Want the flexibility of an everyday account with the interest of a term deposit? 
+                      The Cash Management Account is for you!
+                    </p>
+                  </div>
+                </div>
+              </div>
             </div>
-
-            <div className="bg-white p-8 rounded-xl shadow-md hover:shadow-lg transition-shadow">
-              <CreditCard className="h-12 w-12 text-blue-600 mb-6" />
-              <h3 className="text-2xl font-bold mb-4">Debit and Credit Cards</h3>
-              <p className="text-gray-600 mb-6">
-                Shop, dine, and pay seamlessly with ClearPulse's debit and credit cards. Enjoy financial flexibility and exclusive rewards.
-              </p>
-              <ul className="space-y-2">
-                <li className="flex items-start gap-2 text-gray-600">
-                  <CheckCircle2 className="h-5 w-5 text-green-600 mt-0.5 flex-shrink-0" />
-                  <span>Secure transactions worldwide</span>
-                </li>
-                <li className="flex items-start gap-2 text-gray-600">
-                  <CheckCircle2 className="h-5 w-5 text-green-600 mt-0.5 flex-shrink-0" />
-                  <span>Contactless payment options for faster checkouts</span>
-                </li>
-                <li className="flex items-start gap-2 text-gray-600">
-                  <CheckCircle2 className="h-5 w-5 text-green-600 mt-0.5 flex-shrink-0" />
-                  <span>Exclusive cashback and rewards on every spend</span>
-                </li>
-              </ul>
-            </div>
-
-            <div className="bg-white p-8 rounded-xl shadow-md hover:shadow-lg transition-shadow">
-              <Send className="h-12 w-12 text-blue-600 mb-6" />
-              <h3 className="text-2xl font-bold mb-4">Fund Transfers</h3>
-              <p className="text-gray-600 mb-6">
-                Move your money easily across accounts, whether it's within ClearPulse Bank or to other banks, locally or internationally.
-              </p>
-              <ul className="space-y-2">
-                <li className="flex items-start gap-2 text-gray-600">
-                  <CheckCircle2 className="h-5 w-5 text-green-600 mt-0.5 flex-shrink-0" />
-                  <span>Real-time transfers for ClearPulse accounts</span>
-                </li>
-                <li className="flex items-start gap-2 text-gray-600">
-                  <CheckCircle2 className="h-5 w-5 text-green-600 mt-0.5 flex-shrink-0" />
-                  <span>Secure interbank and international transfers</span>
-                </li>
-                <li className="flex items-start gap-2 text-gray-600">
-                  <CheckCircle2 className="h-5 w-5 text-green-600 mt-0.5 flex-shrink-0" />
-                  <span>Intuitive tracking and notifications</span>
-                </li>
-              </ul>
-            </div>
-
-            <div className="bg-white p-8 rounded-xl shadow-md hover:shadow-lg transition-shadow">
-              <FileText className="h-12 w-12 text-blue-600 mb-6" />
-              <h3 className="text-2xl font-bold mb-4">Account Statements</h3>
-              <p className="text-gray-600 mb-6">
-                Keep track of your financial activity with detailed account statements available online or on demand.
-              </p>
-              <ul className="space-y-2">
-                <li className="flex items-start gap-2 text-gray-600">
-                  <CheckCircle2 className="h-5 w-5 text-green-600 mt-0.5 flex-shrink-0" />
-                  <span>Monthly digital statements sent to your email</span>
-                </li>
-                <li className="flex items-start gap-2 text-gray-600">
-                  <CheckCircle2 className="h-5 w-5 text-green-600 mt-0.5 flex-shrink-0" />
-                  <span>Comprehensive transaction history for better budgeting</span>
-                </li>
-                <li className="flex items-start gap-2 text-gray-600">
-                  <CheckCircle2 className="h-5 w-5 text-green-600 mt-0.5 flex-shrink-0" />
-                  <span>Easy downloads for record-keeping</span>
-                </li>
-              </ul>
-            </div>
-
-            <div className="bg-white p-8 rounded-xl shadow-md hover:shadow-lg transition-shadow">
-              <Clock className="h-12 w-12 text-blue-600 mb-6" />
-              <h3 className="text-2xl font-bold mb-4">24/7 Customer Support</h3>
-              <p className="text-gray-600 mb-6">
-                Our dedicated support team is here to help with any queries or issues, anytime you need assistance.
-              </p>
-              <ul className="space-y-2">
-                <li className="flex items-start gap-2 text-gray-600">
-                  <CheckCircle2 className="h-5 w-5 text-green-600 mt-0.5 flex-shrink-0" />
-                  <span>Round-the-clock service via chat, phone, or email</span>
-                </li>
-                <li className="flex items-start gap-2 text-gray-600">
-                  <CheckCircle2 className="h-5 w-5 text-green-600 mt-0.5 flex-shrink-0" />
-                  <span>Quick resolutions for any banking concerns</span>
-                </li>
-                <li className="flex items-start gap-2 text-gray-600">
-                  <CheckCircle2 className="h-5 w-5 text-green-600 mt-0.5 flex-shrink-0" />
-                  <span>Personalized assistance tailored to your needs</span>
-                </li>
-              </ul>
-            </div>
-
-            <div className="bg-white p-8 rounded-xl shadow-md hover:shadow-lg transition-shadow">
-              <img src="/images/fintech-app.jpg" alt="Modern Banking App" className="w-full h-48 object-cover rounded-lg mb-6" />
-              <h3 className="text-2xl font-bold mb-4">Modern Technology</h3>
-              <p className="text-gray-600">
-                Experience banking powered by cutting-edge technology designed to make your financial life easier and more secure.
-              </p>
+            <div className="relative">
+              <img 
+                src="/images/team-meeting.jpg" 
+                alt="Business Banking" 
+                className="rounded-3xl shadow-2xl"
+              />
+              <div className="absolute -bottom-8 -right-8 bg-[#00A9B8] text-white p-8 rounded-2xl shadow-xl border-4 border-dashed border-white">
+                <div className="text-center">
+                  <div className="text-4xl font-bold">Over 500k</div>
+                  <div className="text-sm mt-2">Active<br />Customers</div>
+                </div>
+              </div>
+              <div className="absolute top-1/2 -right-12 bg-white p-6 rounded-xl shadow-lg">
+                <div className="text-center">
+                  <div className="text-3xl font-bold text-[#1E2A47]">38k+</div>
+                  <div className="text-sm text-gray-600 mt-1">Business Accounts</div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-blue-600 to-blue-800 text-white">
-        <div className="container mx-auto px-6 text-center">
+      <section className="py-20 bg-gradient-to-r from-[#00A9B8] to-[#00C4D4]">
+        <div className="container mx-auto px-4 text-center text-white">
           <h2 className="text-4xl font-bold mb-6">Ready to Get Started?</h2>
-          <p className="text-xl mb-8 max-w-2xl mx-auto">
-            Join thousands of satisfied customers who trust ClearPulse for their banking needs.
+          <p className="text-xl mb-8 text-white/90 max-w-2xl mx-auto">
+            Join thousands of satisfied customers who trust ClearPulse for their banking needs. 
             Open your account today and experience the future of banking.
           </p>
-          <Button size="lg" variant="secondary" asChild className="text-lg px-8">
-            <a href={getLoginUrl()}>
+          <Link href="/dashboard">
+            <Button className="bg-white text-[#00A9B8] hover:bg-gray-100 rounded-full px-8 py-6 text-lg font-semibold">
               Open an Account Now <ArrowRight className="ml-2 h-5 w-5" />
-            </a>
-          </Button>
+            </Button>
+          </Link>
         </div>
       </section>
 
       {/* Footer */}
-      <footer className="bg-gray-900 text-gray-300 py-12">
-        <div className="container mx-auto px-6">
+      <footer className="bg-[#1E2A47] text-white py-12">
+        <div className="container mx-auto px-4">
           <div className="grid md:grid-cols-4 gap-8 mb-8">
             <div>
               <div className="flex items-center gap-2 mb-4">
-                <img src="/logo.png" alt="ClearPulse" className="h-8 w-8" />
-                <span className="text-xl font-bold text-white">ClearPulse</span>
+                <img src="/logo.png" alt="ClearPulse" className="h-10 w-10" />
+                <span className="text-xl font-bold">ClearPulse</span>
               </div>
-              <p className="text-sm">Your trusted partner in managing finances.</p>
+              <p className="text-gray-400 text-sm">
+                Smart, simple, secure banking—at your fingertips
+              </p>
             </div>
             <div>
-              <h4 className="font-semibold text-white mb-4">Company</h4>
+              <h3 className="font-semibold mb-4 text-[#00A9B8]">Quick Links</h3>
               <ul className="space-y-2 text-sm">
-                <li><Link href="/about"><a className="hover:text-white transition-colors">About Us</a></Link></li>
-                <li><Link href="/contact"><a className="hover:text-white transition-colors">Contact</a></Link></li>
+                <li><Link href="/"><a className="text-gray-400 hover:text-white transition-colors">Home</a></Link></li>
+                <li><Link href="/about"><a className="text-gray-400 hover:text-white transition-colors">About</a></Link></li>
+                <li><Link href="/contact"><a className="text-gray-400 hover:text-white transition-colors">Contact</a></Link></li>
+                <li><Link href="/faq"><a className="text-gray-400 hover:text-white transition-colors">FAQ</a></Link></li>
               </ul>
             </div>
             <div>
-              <h4 className="font-semibold text-white mb-4">Support</h4>
+              <h3 className="font-semibold mb-4 text-[#00A9B8]">Services</h3>
               <ul className="space-y-2 text-sm">
-                <li><Link href="/faq"><a className="hover:text-white transition-colors">FAQ</a></Link></li>
-                <li><Link href="/support"><a className="hover:text-white transition-colors">Help Center</a></Link></li>
+                <li><a href="#" className="text-gray-400 hover:text-white transition-colors">Personal Banking</a></li>
+                <li><a href="#" className="text-gray-400 hover:text-white transition-colors">Business Banking</a></li>
+                <li><a href="#" className="text-gray-400 hover:text-white transition-colors">Loans</a></li>
+                <li><a href="#" className="text-gray-400 hover:text-white transition-colors">Cards</a></li>
               </ul>
             </div>
             <div>
-              <h4 className="font-semibold text-white mb-4">Legal</h4>
-              <ul className="space-y-2 text-sm">
-                <li><a href="#" className="hover:text-white transition-colors">Privacy Policy</a></li>
-                <li><a href="#" className="hover:text-white transition-colors">Terms of Service</a></li>
+              <h3 className="font-semibold mb-4 text-[#00A9B8]">Contact Us</h3>
+              <ul className="space-y-2 text-sm text-gray-400">
+                <li>141 Rue De Hollerich</li>
+                <li>Luxembourg</li>
+                <li>Phone: 352929392</li>
+                <li>Email: info@clearpulse.com</li>
               </ul>
             </div>
           </div>
-          <div className="border-t border-gray-800 pt-8 text-center text-sm">
-            <p>&copy; 2024 ClearPulse Bank. All rights reserved.</p>
+          <div className="border-t border-gray-700 pt-8 text-center text-sm text-gray-400">
+            <p>© ClearPulse 2025 | All Rights Reserved</p>
           </div>
         </div>
       </footer>

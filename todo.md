@@ -117,3 +117,12 @@
 - [x] Test all navigation links and buttons
 - [x] Crop Shutterstock watermarks from images
 - [x] Push cleaned images to GitHub
+
+## Homepage Redesign
+- [x] Update color scheme to teal/dark navy based on reference design
+- [x] Redesign hero section with new layout and styling
+- [x] Search and add new professional banking images
+- [x] Update features section with new card-based layout
+- [x] Add statistics badges and customer testimonials section
+- [x] Update footer with new color scheme
+- [ ] Rebuild and push to GitHub
